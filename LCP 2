@@ -1,0 +1,12 @@
+class Solution:
+    def fraction(self, cont: List[int]) -> List[int]:
+        denominator=1
+        numerator=cont[-1]
+        n=len(cont)
+        for i in range(n-2,-1,-1):
+            denominator,numerator=numerator,denominator
+            numerator=cont[i]*denominator+numerator
+        return [numerator,denominator]
+
+
+        
